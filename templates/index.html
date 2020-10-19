@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" style="display: grid;">
+<head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/static/css/index.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <title>Weather APP</title>
+        <style>
+            .info {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            }
+        </style>
+</head>
+
+<body class="background-div">
+    <nav class="StyledNav">
+        <a href="/"><img class="NavImage" src="/static/Images/toij_Text.png" alt=""></a>
+        <span class='NavSpan'>City Weather</span>
+    </nav>
+    <main class="col-5 col-md-5 col-xl-5 py-md-s background-div card-container">
+        <form action="/" method="post">
+            <div class="form-group">
+                <label>City:</label>
+                <input type="textbox" name="city" id="word" class="form-control" placeholder="Enter Location">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+        </form><br>
+        <div class="info">
+            <p> &nbsp;
+                {% if message %}
+                {{message}}
+                {% endif %}
+            </p>
+        </div>
+    </main>
+</body>
+<script>
+</script> 
+</html>
